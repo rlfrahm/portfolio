@@ -12,4 +12,5 @@
 
 .content-wrapper {
   margin-left: 250px;
+  position: absolute;
 }
