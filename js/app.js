@@ -114,11 +114,25 @@ angular.module('App', ['ngRoute'])
           $scope.hour = d.getHours();
           $scope.minute = d.getMinutes();
           $scope.second = d.getSeconds();
-          console.log($scope.second);
         }, 1000);
       },
       templateUrl: './partials/clock.html'
     };
+  }
+])
+
+.directive('appWeather', ['$http',
+  function($http) {
+    return {
+      restrict: 'E',
+      scope: {},
+      controller: function($scope) {
+        $http.get('http://api.openweathermap.org/data/2.5/weather?q=Ames,ia')
+        .success(function(response) {
+          console.log(response);
+        });
+      }
+    }
   }
 ])
 
