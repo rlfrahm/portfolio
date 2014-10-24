@@ -1,0 +1,9 @@
+<ul>
+  <li ng-repeat="item in feed" ng-init="item.verbage = GetEventVerbage(item.type)">
+    <span>
+      <a href="https://github.com/{{item.actor.login}}">{{item.actor.login}}</a> <a href="{{item.payload.commits[0].url}}">{{item.verbage}}</a> <a href="https://github.com/{{item.repo.name}}">{{item.repo.name}}</a>
+    </span>
+    <small>{{item.created_at}}</small>
+  </li>
+</ul>
+<a ng-hide="loaded" style="display:block;text-align:center;"><i class="fa fa-spinner fa-spin" style="font-size:30px;padding:20px;"></i></a>

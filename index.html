@@ -15,27 +15,52 @@
     <script type="text/javascript" src="js/widgets.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
   </head>
-  <body>
+  <body ng-controller="IndexController">
     <header>
       <div id="menu-toggle">
-        <a href><i class="fa fa-bars"></i></a>
+        <a href ng-init="sidebarhidden = false" ng-click="ToggleSidebarMenu()"><i class="fa fa-bars"></i></a>
       </div>
       <ul class="header header-left">
         <li><a href="https://www.linkedin.com/in/ryanfrahm" class="item"><i class="fa fa-linkedin"></i></a></li>
         <li><a href="https://github.com/rlfrahm" class="item"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://www.drupal.org/u/rlfrahm" class="item"><i class="fa fa-drupal"></i></a></li>
       </ul>
       <ul class="header header-right">
         <li><app-clock></app-clock></li>
       </ul>
     </header>
     <section id="main">
-      <aside id="sidebar">
+      <aside id="sidebar" ng-class="{'slideHidden':sidebarhidden}">
         <div class="widgets">
           <app-me class="widget widget-prof"></app-me>
+          <article class="widget">
+            <div class="wheader">
+              <h2>Github Feed</h2>
+            </div>
+            <div class="wcontent">
+              <w-github-feed></w-github-feed>
+            </div>
+          </article>
         </div>
         <div ng-include src="'partials/sidebar-icon-bar.html'"></div>
       </aside>
-      <section id="content">
+      <section id="content" ng-class="{'slideHidden':sidebarhidden}">
+        <section class="section">
+          <div class="row">
+            <div class="tile">
+              <a href>
+                <i></i>
+                <span>Angular</span>
+              </a>
+            </div>
+            <div class="tile">
+              <a href>
+                <i class="fa fa-drupal"></i>
+                <span>Drupal</span>
+              </a>
+            </div>
+          </div>
+        </section>
         <section class="section">
           <div class="row">
             <div class="col-sm-4">
@@ -72,7 +97,15 @@
           <div class="row">
             <article class="widget">
               <div class="wheader">
-                <h2>Header</h2>
+                <h2>Front-end</h2>
+              </div>
+              <div class="wcontent">
+                <p>some content</p>
+              </div>
+            </article>
+            <article class="widget">
+              <div class="wheader">
+                <h2>Back-end</h2>
               </div>
               <div class="wcontent">
                 <p>some content</p>

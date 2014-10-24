@@ -6,6 +6,13 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition:    all 0.2s ease;
+  -ms-transition:     all 0.2s ease;
+  -o-transition:      all 0.2s ease;
+}
+
 ::selection {
   background: rgba(255,255,255,0.1);
 }
@@ -109,7 +116,7 @@ header:after {
   height: 100%;
 }
 
-a, h1, h2, h3, h4, span, p, i {
+a, h1, h2, h3, h4, span, p, i, small {
   color: #fff;
 }
 
@@ -143,8 +150,12 @@ a, h1, h2, h3, h4, span, p {
   float: left;
   background: rgba(0,0,0,0.3);
   height: 100%;
-  position: absolute;
+  position: fixed;
   padding-left: 45px;
+}
+
+#sidebar.slideHidden {
+  left: -233px;
 }
 
 #sidebar .widgets {
@@ -166,6 +177,10 @@ a, h1, h2, h3, h4, span, p {
   margin-left: 233px;
 }
 
+#content.slideHidden {
+  margin-left: 0;
+}
+
 .page-wrapper {
 
 }
@@ -185,6 +200,7 @@ a, h1, h2, h3, h4, span, p {
 
 .widget {
   display: block;
+  margin-bottom: 20px;
 }
 
 .widget-prof {
@@ -232,7 +248,7 @@ a, h1, h2, h3, h4, span, p {
 }
 
 #content .section {
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
@@ -252,4 +268,29 @@ a, h1, h2, h3, h4, span, p {
 
 .wcontent {
   padding: 10px;
+}
+
+.tile {
+  background: rgba(0,0,0,0.35);
+  height: 62px;
+  width: 65px;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  text-align: center;
+  position: relative;
+  vertical-align: top;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.tile > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 11px 10px 0;
+}
+
+.tile span {
+  font-size: 11px;
 }
