@@ -16,6 +16,8 @@ angular.module('widgets', [])
             console.log(response);
             $scope.loaded = true;
             $scope.data = response;
+            $scope.data.main.temp = Math.round((response.main.temp - 273.15) * 1.8);
+            $scope.symbol = "F";
           });
         }
       },

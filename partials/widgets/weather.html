@@ -1,5 +1,14 @@
-<span>{{data.main.temp}}</span>
-<div ng-repeat="w in data.weather">
-  <img src="http://openweathermap.org/img/w/{{w.icon}}.png">
+<div ng-show="loaded" class="row">
+  <div class="col-sm-6">
+    <h2 style="float:left;margin-right:10px;">{{data.main.temp}} <small>&deg;{{symbol}}</small></h2>
+    <img src="http://openweathermap.org/img/w/{{data.weather[0].icon}}.png">
+  </div>
+  <div class="col-sm-6">
+    <span>Humidity: {{data.main.humidity}} %</span>
+    <span>Wind: {{data.wind.speed}} km/h</span>
+  </div>
 </div>
+<!-- <div ng-repeat="w in data.weather">
+  <img src="http://openweathermap.org/img/w/{{w.icon}}.png">
+</div> -->
 <a ng-hide="loaded" style="display:block;text-align:center;"><i class="fa fa-spinner fa-spin" style="font-size:30px;padding:20px;"></i></a>
