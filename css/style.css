@@ -294,3 +294,12 @@ a, h1, h2, h3, h4, span, p {
 .tile span {
   font-size: 11px;
 }
+
+.github-feed-item {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.github-feed-item span {
+  display: block;
+}

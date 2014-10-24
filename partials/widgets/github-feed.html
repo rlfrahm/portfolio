@@ -1,5 +1,5 @@
 <ul>
-  <li ng-repeat="item in feed" ng-init="item.verbage = GetEventVerbage(item.type)">
+  <li class="github-feed-item" ng-repeat="item in feed" ng-init="item.verbage = GetEventVerbage(item.type)">
     <span>
       <a href="https://github.com/{{item.actor.login}}">{{item.actor.login}}</a> <a href="{{item.payload.commits[0].url}}">{{item.verbage}}</a> <a href="https://github.com/{{item.repo.name}}">{{item.repo.name}}</a>
     </span>
