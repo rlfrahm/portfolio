@@ -1,4 +1,4 @@
-angular.module('App', ['ngRoute'])
+angular.module('App', ['ngRoute', 'widgets'])
 
 .controller('IndexController', ['$scope', 
   function($scope) {
@@ -118,21 +118,6 @@ angular.module('App', ['ngRoute'])
       },
       templateUrl: './partials/clock.html'
     };
-  }
-])
-
-.directive('appWeather', ['$http',
-  function($http) {
-    return {
-      restrict: 'E',
-      scope: {},
-      controller: function($scope) {
-        $http.get('http://api.openweathermap.org/data/2.5/weather?q=Ames,ia')
-        .success(function(response) {
-          console.log(response);
-        });
-      }
-    }
   }
 ])
 

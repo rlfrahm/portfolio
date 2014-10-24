@@ -6,32 +6,78 @@
     <!-- <link rel="stylesheet" href="vendor/simplesidebar/simple-sidebar.min.css"> -->
     <link rel="stylesheet" href="vendor/font-awesome-4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="vendor/weather-icons-1.2.1/css/weather-icons.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/3.2.0/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- // <script type="text/javascript" src="vendor/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
     <script type="text/javascript" src="vendor/angular/js/1.2.x/angular.min.js"></script>
     <script type="text/javascript" src="vendor/angular/js/1.2.x/angular-route.min.js"></script>
     <script type="text/javascript" src="vendor/d3/3.4.13/js/d3.min.js"></script>
+    <script type="text/javascript" src="js/widgets.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
   </head>
   <body>
     <header>
-      <div id="#menu-toggle"></div>
-      <div class="header-right">
-        <app-clock></app-clock>
-        <app-weather></app-weather>
+      <div id="menu-toggle">
+        <a href><i class="fa fa-bars"></i></a>
       </div>
+      <ul class="header header-left">
+        <li><a href="https://www.linkedin.com/in/ryanfrahm" class="item"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/rlfrahm" class="item"><i class="fa fa-github"></i></a></li>
+      </ul>
+      <ul class="header header-right">
+        <li><app-clock></app-clock></li>
+      </ul>
     </header>
     <section id="main">
       <aside id="sidebar">
         <div class="widgets">
           <app-me class="widget widget-prof"></app-me>
         </div>
-        <div class="icon-bar" ng-include src="'partials/sidebar-icon-bar.html'"></div>
+        <div ng-include src="'partials/sidebar-icon-bar.html'"></div>
       </aside>
       <section id="content">
         <section class="section">
           <div class="row">
-            
+            <div class="col-sm-4">
+              <article class="widget">
+                <div class="wheader">
+                  <h2>Header</h2>
+                </div>
+                <div class="wcontent">
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-4">
+              <article class="widget">
+                <div class="wheader">
+                  <h2>Header</h2>
+                </div>
+                <div class="wcontent">
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-4">
+              <article class="widget">
+                <div class="wheader">
+                  <h2>Weather</h2>
+                </div>
+                <div class="wcontent">
+                  <w-weather></w-weather>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="row">
+            <article class="widget">
+              <div class="wheader">
+                <h2>Header</h2>
+              </div>
+              <div class="wcontent">
+                <p>some content</p>
+              </div>
+            </article>
           </div>
         </section>
       </section>
