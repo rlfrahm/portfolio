@@ -93,6 +93,35 @@ angular.module('App', ['ngRoute'])
   }
 ])
 
+.directive('appMe', [
+  function() {
+    return {
+      restrict: 'E',
+      templateUrl: './partials/sidebar/user-info.html' 
+    };
+  }
+])
+
+.directive('appClock', ['$interval',
+  function($interval) {
+    return {
+      restrict: 'E',
+      scope: {},
+      controller: function($scope) {
+        
+        $interval(function() {
+          var d = new Date();
+          $scope.hour = d.getHours();
+          $scope.minute = d.getMinutes();
+          $scope.second = d.getSeconds();
+          console.log($scope.second);
+        }, 1000);
+      },
+      templateUrl: './partials/clock.html'
+    };
+  }
+])
+
 .config(['$routeProvider','$locationProvider',
   function($routeProvider,$locationProvider) {
     $routeProvider

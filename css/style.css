@@ -1,3 +1,76 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url('../images/ambient_light_wallpaper.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: 'open-sans-light', sans-serif;
+  margin: 0;
+}
+
+body, button, input, textarea, select, .btn {
+  -webkit-font-smoothing: antialiased;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  min-height: 50px;
+  position: relative;
+  padding-right: 7px;
+}
+
+a, h1, h2, h3, h4, span {
+  color: #fff;
+  text-shadow: 0 0 3px rgba(255,255,255,0.4);
+  font-family: 'open-sans-light', sans-serif;
+}
+
+#menu-toggle {
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  min-height: 50px;
+  position: relative;
+  padding-right: 7px;
+}
+
+#main {
+  background: rgba(255,255,255,0.1);
+}
+
+#sidebar {
+  width: 233px;
+  float: left;
+  background: rgba(0,0,0,0.3);
+  height: 100%;
+  position: absolute;
+  padding-left: 45px;
+}
+
+#sidebar .widgets {
+  width: 188px;
+  float: left;
+  position: relative;
+}
+
+#sidebar .icon-bar {
+  width: 45px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+}
+
 .page-wrapper {
 
 }
@@ -13,4 +86,47 @@
 .content-wrapper {
   margin-left: 250px;
   position: absolute;
+}
+
+.widget {
+  display: block;
+}
+
+.widget-prof {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 120px;
+  height: auto;
+  margin: 9px 0 4px;
+  border-radius: 100px;
+  border: 6px solid rgba(0,0,0,0.2);
+}
+
+.icon-bar {
+  width: 100%;
+  font-size: 0;
+  display: inline-block;
+}
+
+.icon-bar > * {
+  text-align: center;
+  display: block;
+}
+
+.icon-bar > * i {
+  width: 1.875rem;
+  height: 1.875rem;
+  color: #fff;
+}
+
+.icon-bar.vertical {
+  margin: auto;
+  width: auto;
+  float: none;
+}
+
+.list.vertical .item {
+  display:block;
 }

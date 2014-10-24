@@ -1,21 +1,46 @@
 <html ng-app="App">
   <head>
-    <link rel="stylesheet" href="vendor/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>Ryan Frahm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- <link rel="stylesheet" href="vendor/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="vendor/simplesidebar/simple-sidebar.min.css"> -->
+    <link rel="stylesheet" href="vendor/font-awesome-4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="vendor/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- // <script type="text/javascript" src="vendor/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
     <script type="text/javascript" src="vendor/angular/js/1.2.x/angular.min.js"></script>
     <script type="text/javascript" src="vendor/angular/js/1.2.x/angular-route.min.js"></script>
     <script type="text/javascript" src="vendor/d3/3.4.13/js/d3.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
   </head>
   <body>
-    <div class="page-wrapper">
-      <div class="sidebar-wrapper">
-        <div ng-include src="'partials/sidebar-menu.html'"></div>
+    <header>
+      <div id="#menu-toggle"></div>
+      <div class="header-right">
+        <app-clock></app-clock>
       </div>
-      <div class="content-wrapper">
+    </header>
+    <section id="main">
+      <aside id="sidebar">
+        <div class="widgets">
+          <app-me class="widget widget-prof"></app-me>
+        </div>
+        <div class="icon-bar" ng-include src="'partials/sidebar-icon-bar.html'"></div>
+      </aside>
+      <section id="content">
+        <section class="section">
+          <div class="row">
+            
+          </div>
+        </section>
+      </section>
+    </section>
+    <!-- <div id="wrapper" style="position:relative;">
+      <aside id="sidebar-wrapper">
+        
+      </aside>
+      <div id="content-wrapper" style="position:absolute;">
         <div ng-view></div>
       </div>
-    </div>
+    </div> -->
   </body>
 </html>
