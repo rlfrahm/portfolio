@@ -3,7 +3,7 @@ angular.module('App', ['ngRoute', 'widgets'])
 .controller('IndexController', ['$scope', 
   function($scope) {
     $scope.ToggleSidebarMenu = function() {
-      $scope.sidebarhidden = !$scope.sidebarhidden;
+      $scope.sidebartoggle = !$scope.sidebartoggle;
     };
   }
 ])

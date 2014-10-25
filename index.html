@@ -18,7 +18,7 @@
   <body ng-controller="IndexController">
     <header>
       <div id="menu-toggle">
-        <a href ng-init="sidebarhidden = false" ng-click="ToggleSidebarMenu()"><i class="fa fa-bars"></i></a>
+        <a href ng-init="sidebartoggle = false" ng-click="ToggleSidebarMenu()"><i class="fa fa-bars"></i></a>
       </div>
       <ul class="header header-left">
         <li><a href="https://www.linkedin.com/in/ryanfrahm" class="item"><i class="fa fa-linkedin"></i></a></li>
@@ -30,7 +30,7 @@
       </ul>
     </header>
     <section id="main">
-      <aside id="sidebar" ng-class="{'slideHidden':sidebarhidden}">
+      <aside id="sidebar" ng-class="{'slideToggle':sidebartoggle}">
         <div class="widgets">
           <app-me class="widget widget-prof"></app-me>
           <article class="widget">
@@ -44,7 +44,7 @@
         </div>
         <div ng-include src="'partials/sidebar-icon-bar.html'"></div>
       </aside>
-      <section id="content" ng-class="{'slideHidden':sidebarhidden}">
+      <section id="content" ng-class="{'slideToggle':sidebartoggle}">
         <section class="section">
           <div class="row">
             <div class="tile">

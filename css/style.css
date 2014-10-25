@@ -160,11 +160,12 @@ a:hover {
   background: rgba(0,0,0,0.3);
   height: 100%;
   position: fixed;
+  left: -233px;
   padding-left: 45px;
 }
 
-#sidebar.slideHidden {
-  left: -233px;
+#sidebar.slideToggle {
+  left: 0;
 }
 
 #sidebar .widgets {
@@ -187,11 +188,11 @@ a:hover {
 }
 
 #content {
-  margin-left: 233px;
+  margin-left: 0;
 }
 
-#content.slideHidden {
-  margin-left: 0;
+#content.slideToggle {
+  margin-left: 233px;
 }
 
 .page-wrapper {
@@ -324,4 +325,22 @@ a:hover {
 
 .github-feed-item span {
   display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  #sidebar {
+    left: 0;
+  }
+
+  #sidebar.slideToggle {
+    left: -233px;
+  }
+
+  #content {
+    margin-left: 233px;
+  }
+
+  #content.slideToggle {
+    margin-left: 0;
+  }
 }
