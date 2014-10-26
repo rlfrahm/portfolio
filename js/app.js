@@ -1,7 +1,22 @@
 angular.module('App', ['ngRoute', 'widgets'])
 
-.controller('IndexController', ['$scope', 
-  function($scope) {
+.controller('IndexController', ['$scope', '$http',
+  function($scope, $http) {
+    $http.get('./content/examples.json').success(
+      function(response) {
+        $scope.examples = response.sites;
+        console.log(response);
+      }
+    );
+    $scope.examples = [{
+      title: 'Example',
+      path: 'example',
+      content: 'example.html'
+    }, {
+      title: 'Example',
+      path: 'example',
+      content: 'example.html'
+    }, ];
     $scope.ToggleSidebarMenu = function() {
       $scope.sidebartoggle = !$scope.sidebartoggle;
     };
@@ -127,8 +142,11 @@ angular.module('App', ['ngRoute', 'widgets'])
   function($routeProvider,$locationProvider) {
     $routeProvider
     .when('/', {
-      templateUrl: 'partials/main.html',
+      templateUrl: 'content/main.html',
       controller: 'IndexController'
+    })
+    .when('/example', {
+      templateUrl: 'content/example.html'
     })
     .when('/d3chart', {
       templateUrl: 'partials/d3-chart.html',

@@ -116,6 +116,10 @@ header:after {
   padding: 5px 0;
 }
 
+.header i:hover {
+  opacity: 0.5;
+}
+
 .header-right span {
   height: 100%;
 }
@@ -159,7 +163,7 @@ a:hover {
   float: left;
   background: rgba(0,0,0,0.3);
   height: 100%;
-  position: fixed;
+  position: absolute;
   left: -233px;
   padding-left: 45px;
 }
@@ -326,6 +330,8 @@ a:hover {
 .github-feed-item span {
   display: block;
 }
+
+
 
 @media only screen and (min-width: 768px) {
   #sidebar {
