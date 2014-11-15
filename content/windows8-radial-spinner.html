@@ -19,9 +19,9 @@
   position: absolute;
   width: 38px;
   height: 38px;
-  opacity: 0;
+  -webkit-transform: rotate(225deg);
   transform: rotate(225deg);
-  -webkit-animation: orbit 5.5s infinite;
+  -webkit-animation: orbit 2s infinite;
   animation: orbit 5.5s infinite;
 }
 
@@ -40,48 +40,28 @@
 .loader .circle:nth-child(5) {  -webkit-animation-delay: 960ms; }
 
 @-webkit-keyframes orbit { 
-  0%   { transform:rotate(225deg); opacity: 1;
-         -webkit-animation-timing-function: ease-out; } 
+  0%   { -webkit-transform:rotate(225deg);
+         -webkit-animation-timing-function: ease-in-out; } 
     
-  7%   { transform:rotate(345deg);
+  15%   { -webkit-transform:rotate(345deg);
          -webkit-animation-timing-function: linear; }
     
-  30%   { transform:rotate(455deg);
+  85%   { -webkit-transform:rotate(455deg);
           -webkit-animation-timing-function: ease-in-out; }
     
-  39%   { transform:rotate(690deg);
-          -webkit-animation-timing-function: linear; }
-    
-  70%   { transform:rotate(815deg); opacity: 1;
-          -webkit-animation-timing-function: ease-out; }
-    
-  75%   { transform:rotate(945deg); 
-          -webkit-animation-timing-function: ease-out; }
-    
-  /*76% {  transform:rotate(945deg); opacity: 0; }*/
-  100% { transform:rotate(945deg); opacity: 0; } 
+  100% { -webkit-transform:rotate(585deg); } 
 }
 
 @keyframes orbit { 
-  0%   { transform:rotate(225deg); opacity: 1;
-         animation-timing-function: ease-out; } 
+  0%   { transform:rotate(225deg);
+         animation-timing-function: ease-in-out; } 
     
-  7%   { transform:rotate(345deg);
+  15%   { transform:rotate(345deg);
          animation-timing-function: linear; }
     
-  30%   { transform:rotate(455deg);
+  85%   { transform:rotate(455deg);
           animation-timing-function: ease-in-out; }
-    
-  39%   { transform:rotate(690deg);
-          animation-timing-function: linear; }
-    
-  70%   { transform:rotate(815deg); opacity: 1;
-         animation-timing-function: ease-out; }
-    
-  75%   { transform:rotate(945deg); 
-         animation-timing-function: ease-out; }
-    
-  76% { transform:rotate(945deg); opacity: 0; }
-  100% { transform:rotate(945deg); opacity: 0; } 
+
+  100% { transform:rotate(585deg); opacity: 0; } 
 }
 </style>
