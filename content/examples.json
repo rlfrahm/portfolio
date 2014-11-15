@@ -6,4 +6,8 @@
   "title": "Google Material Radial Spinner",
   "path": "google-material-radial-spinner",
   "content": "google-material-radial-spinner.html"
+}, {
+  "title": "Windows 8 Radial Spinner",
+  "path": "windows8-radial-spinner",
+  "content": "windows8-radial-spinner.html"
 }]}

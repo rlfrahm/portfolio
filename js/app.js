@@ -151,6 +151,9 @@ angular.module('App', ['ngRoute', 'widgets'])
     .when('/google-material-radial-spinner', {
       templateUrl: 'content/google-material-radial-spinner.html'
     })
+    .when('/windows8-radial-spinner', {
+      templateUrl: 'content/windows8-radial-spinner.html'
+    })
     .when('/d3chart', {
       templateUrl: 'partials/d3-chart.html',
       controller: 'ChartController'
